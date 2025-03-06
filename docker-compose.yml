@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb_container
+    environment:
+      MYSQL_ROOT_PASSWORD: 123       # Set the root password
+      MYSQL_DATABASE: project        # Create a 'project' database
+    restart: always                   # Automatically restart the container if it fails
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # SQL script that will create tables in current directory
+      - ./customer_info.txt:/customer_info.txt           #customer info data text file example
+      - ./phone_info.txt:/phone_info.txt                 # phone info data text file example
+      - ./data_insertion.sh:/data_insertion.sh           # bash script that will insert data from files to tables
