@@ -23,3 +23,9 @@ This project inserts data from files into database tables using a bash script. T
    ```bash
    git clone https://github.com/khkhkhkhader/bash-mariadb-docker-project.git
    cd bash-mariadb-docker-project
+2. **run the compose file**
+   docker compose up -d
+   docker exec -it mariadb_container bash
+
+3. **run bash script for data insertion**
+   bash data_insertion.sh
