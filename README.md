@@ -1,6 +1,6 @@
 # MariaDB Docker Project
 
-This project inserts data from files into database tables using a bash script. The database name is `project`, and it runs over a MariaDB container using a Docker Compose YAML file. Refering to init.sql file in the path "/docker-entrypoint-initdb.d/" in the container which will excuted when the container starts for the first time
+This project inserts data from files into database tables using a bash script. The database name is `project`, and it runs over a MariaDB container using a Docker Compose YAML file. Refering to init.sql file in the path "/docker-entrypoint-initdb.d/" in the container which will be excuted when the container starts for the first time
 ## Project Structure
 
 - **docker-compose.yml**: Defines the services to be used, which includes MariaDB and the initialization script.
